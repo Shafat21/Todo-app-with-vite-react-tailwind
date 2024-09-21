@@ -1,0 +1,163 @@
+label {
+    position: relative;
+}
+
+.input {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 1em 1em 1em 4em;
+    position: relative;
+    margin-bottom: 1em;
+}
+
+.containerDark {
+    background-color: hsl(235, 24%, 19%) !important;
+    border: none;
+    color: hsl(0, 0%, 98%);
+    border-bottom: 1px solid hsl(234, 11%, 52%) !important;
+}
+.circle {
+    width: 20px;
+    height: 20px;
+    border: 1px solid;
+    border-color: hsl(236, 33%, 92%);
+    display: inline-block;
+    border-radius: 50%;
+    z-index: 1;
+    position: absolute;
+    left: 20px;
+    top: 49%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.listHolder {
+    min-width: 100%;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.toDoItem {
+    width: 100%;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    border-bottom: hsl(236, 33%, 92%) 1px solid;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style-type: none;
+    padding: 1em 1em 1em 2em;
+    color: hsl(234, 11%, 52%);
+}
+
+.TodoItemButton {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid;
+    border-color: hsl(236, 33%, 92%);
+    background-color: white;
+    position: relative;
+    left: 20px;
+    cursor: pointer;
+}
+
+.completeBackground {
+    background: linear-gradient(to bottom right, hsl(118, 100%, 67%), hsl(194, 82%, 53%));
+    border: none;
+}
+
+.completeBackground::after {
+    content: "";
+    position: absolute;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-image: url(../images/icon-check.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.completedTask {
+    color: hsl(236, 33%, 92%);
+    text-decoration: line-through;
+}
+
+.filterButton {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-weight: 700;
+    color: hsl(234, 11%, 52%);
+}
+
+.selected {
+    color: blue;
+}
+
+.clearButton {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: hsl(234, 11%, 52%);
+}
+
+.listLength {
+    color: hsl(234, 11%, 52%);
+}
+
+.darkButton {
+    background-color: hsl(235, 24%, 19%);
+}
+
+.dragNDrop {
+    text-align: center;
+    margin-top: 2em;
+    color: hsl(234, 11%, 52%);
+}
+
+.filterContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5em 1em .5em 1em;
+}
+
+@media screen and (max-width: 1000px) {
+    .filterContainer {
+        justify-content: center;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .mobileDivFilter {
+        display: flex;
+        justify-content: space-between;
+        padding: 1em;
+    }
+    .mobileFooter {
+        text-align: center;
+        padding: 1em;
+    }
+    .input {
+        margin-bottom: 0;
+    }
+    .listLength {
+        display: flex;
+        justify-content: space-between;
+        padding: 1em;
+        margin-bottom: 1em;
+    }
+    .listHolder {
+        margin-top: 1em;
+        border-radius: 2px;
+    }
+}

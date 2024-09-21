@@ -1,0 +1,112 @@
+html {
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+}
+
+.toDoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    top: -200px;
+}
+
+.toDoItems {
+    width: 35em;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3em;
+    color: white;
+}
+
+.logo {
+    width: 50px;
+    margin-right: 10px;
+}
+
+svg {
+    cursor: pointer;
+}
+
+.darkTheme {
+    background-color: hsl(235, 21%, 11%);
+    height: 100vh;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    pointer-events: none; /* Ensure it doesn't interfere with interactions */
+    z-index: 1;
+}
+
+.specialOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0.5));
+    pointer-events: none;
+    z-index: 2;
+}
+
+@media screen and (max-width: 900px) {
+    .App {
+        width: 100vw;
+        height: 100vh;
+    }
+    .toDoContainer {
+        top: -170px;
+        width: 100%;
+    }
+    .toDoItems {
+        width: 90%;
+    }
+    .title {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .toDoContainer {
+        top: -150px;
+        width: 100%;
+    }
+}
+
+/* Footer Styles */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    background-color: hsl(235, 21%, 11%);
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footerLogo {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.footer p {
+    margin: 0;
+}
